@@ -1,29 +1,29 @@
-<!DOCTYPE html>
-<html lang='en'>
-    
+<!DOCTYPE HTML>
+<html lang = 'en'>
     <head>
-        <meta charset="utf-8">
         <title>Hello Triangle</title>
-        <style>#MyGLCanvas{border: 1px solid red;}</style>
+        <style>
+            #MyGLCanvas{border: 1px solid red;}
+        </style>
     </head>
-    
-    
     <body onload="startup();">
-        
-        <canvas id = "MyGLCanvas" width="500" height="500"></canvas>
+        <canvas id ="MyGLCanvas" width="500" height="500"></canvas>
         <script>
-        
             var canvas;
             var gl;
+
             var shaderProgram;
             var vertexBuffer;
-            
-            function startup(){
-                canvas=document.getElementById("myGLCanvas");
-                gl=createGLContext(canvas);
+
+            function startup()
+            {
+                canvas = document.getElementById("MyGLCanvas");
+                gl = createGLContext(canvas);
+
                 setupShaders();
                 setupBuffers();
-                gl.clearColor(1.0, 1.0, 1.0, 1.0);
+
+                gl.clearColor(1.0,0.0,0.0,1.0);
                 draw();
             }
         
@@ -107,7 +107,7 @@
             function setupBuffers()
             {
                 const colors = [
-                    1.0,  0.0,  0.0,
+                    0.0,  1.0,  1.0,
                     0.0,  1.0,  0.0,
                     0.0,  0.0,  1.0,
                 ];
